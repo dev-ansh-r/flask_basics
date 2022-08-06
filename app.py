@@ -12,7 +12,8 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 
 #init db
-db= SQLAlchemy(app)
+db = SQLAlchemy(app)
+
 
 #init ma
 ma= Marshmallow(app)
@@ -29,6 +30,7 @@ class User(db.Model):
         self.username = username
         self.email = email
         self.cringe = cringe #cringe is the cringe
+
 
 #userschema
 class UserSchema(ma.Schema):
